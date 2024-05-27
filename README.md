@@ -3,22 +3,6 @@
 # Overview
 The Automated Compliance Monitoring project aims to automate compliance monitoring within AWS environments using various AWS services like AWS Config, AWS CloudTrail, Amazon GuardDuty, and AWS Security Hub. It leverages AWS Lambda for custom compliance checks and Amazon SNS for notifications.
 
-# Repository Structure
-
-aws-compliance-monitoring/
-├── src/
-│   ├── cloudformation/
-│   │   ├── config_rule.yaml       # CloudFormation template for AWS Config rules
-│   │   ├── cloudtrail.yaml        # CloudFormation template for AWS CloudTrail setup
-│   │   ├── guardduty.yaml         # CloudFormation template for Amazon GuardDuty configuration
-│   │   ├── securityhub.yaml       # CloudFormation template for AWS Security Hub setup
-│   ├── lambda/
-│   │   └── compliance_check.py    # Lambda function for custom compliance checks
-│   └── notifications/
-│       └── sns_topic.yaml         # CloudFormation template for creating an SNS topic for notifications
-└── README.md                      # Detailed documentation for the project
-
-
 # Components
 
 # AWS CloudFormation Templates
