@@ -1,0 +1,10 @@
+Resources:
+  CloudTrail:
+    Type: AWS::CloudTrail::Trail
+    Properties:
+      TrailName: YourTrailName
+      S3BucketName: YourS3BucketName
+      IsLogging: true
+      IncludeGlobalServiceEvents: true
+      EnableLogFileValidation: true
+      CloudWatchLogsLogGroupArn: YourCloudWatchLogGroupArn

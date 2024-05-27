@@ -1,0 +1,6 @@
+Resources:
+  ComplianceSNSTopic:
+    Type: AWS::SNS::Topic
+    Properties:
+      DisplayName: ComplianceNotificationTopic
+      TopicName: compliance-notification-topic

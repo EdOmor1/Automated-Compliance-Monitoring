@@ -1,0 +1,24 @@
+Resources:
+  ConfigRule:
+    Type: AWS::Config::ConfigRule
+    Properties:
+      ConfigRuleName: YourConfigRuleName
+      Description: Your Config Rule Description
+      Scope:
+        ComplianceResourceTypes:
+          - AWS::AllSupported
+      Source:
+        Owner: CUSTOM_LAMBDA
+        SourceIdentifier: !Sub ${LambdaFunction.Arn}
+      MaximumExecutionFrequency: TwentyFour_Hours
+
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: compliance_check.handler
+      Role: YourLambdaExecutionRole
+      Runtime: python3.8
+      Code:
+        S3Bucket: YourBucketName
+        S3Key: YourLambdaZipFile.zip
+      Timeout: 300

@@ -1,0 +1,5 @@
+Resources:
+  SecurityHub:
+    Type: AWS::SecurityHub::Hub
+    Properties:
+      Enable: true
